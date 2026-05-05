@@ -7,13 +7,13 @@ import { SplitText } from 'gsap/all';
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 export default function ServicesTicker() {
-  const scope = useRef(null); // Container scoping-er jonno
+  const scope = useRef(null);
 
   useLayoutEffect(() => {
-    // React-er bhetore Vanilla JS dhoroner logic
-    // Shudhu ei component-er bhetorer element-gulo dhorbe
-    let wrapper = scope.current.querySelector(".Horizontal");
-    let text = scope.current.querySelector(".Horizontal__text");
+    let wrapper = scope.current?.querySelector(".Horizontal");
+    let text = scope.current?.querySelector(".Horizontal__text");
+
+    if (!wrapper || !text) return;
 
     // Main Horizontal Scroll
     const scrollTween = gsap.to(text, {
@@ -28,8 +28,7 @@ export default function ServicesTicker() {
       }
     });
 
-    // Jodi SplitText plugin apnar thake, tobe vanilla style-e nicher line kaj korbe:
-    
+    // SplitText animation
     let split = SplitText.create(".Horizontal__text", { type: "chars, words" });
     split.chars.forEach((char) => {
       gsap.from(char, {
@@ -45,9 +44,7 @@ export default function ServicesTicker() {
         }
       });
     });
-  
 
-    // Component unmount hole animation clean korbe
     return () => {
       ScrollTrigger.getAll().forEach(t => t.kill());
     };
@@ -55,9 +52,9 @@ export default function ServicesTicker() {
 
   return (
     <div ref={scope}>
-      <section className="Horizontal">
-        <div className="container">
-          <h3 className="Horizontal__text heading-xl text-black">
+      <section className="Horizontal py-12 bg-[#f0eeeb] sm:py-20 md:py-32">
+        <div className="container px-4 sm:px-6 md:px-12">
+          <h3 className="Horizontal__text heading-xl text-black font-extrabold text-[clamp(40px,10vw,120px)] leading-[1] tracking-[-0.03em]">
             Ready to Rise at Seven?
           </h3>
         </div>

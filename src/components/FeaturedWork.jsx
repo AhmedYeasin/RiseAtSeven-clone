@@ -32,11 +32,11 @@ export default function FeaturedWork({ workContainerRef }) {
 
   return (
     <section className="bg-[#f0eeeb] px-4 md:px-6 pb-6">
-      <div ref={workContainerRef} className="bg-[#111] rounded-[24px] overflow-hidden relative">
-        <div className="grid grid-cols-1 lg:grid-cols-2 h-[100vh] sticky top-[72px] max-h-[calc(100vh-72px)]">
+      <div ref={workContainerRef} className="bg-[#111] rounded-[20px] md:rounded-[24px] overflow-hidden relative">
+        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen lg:h-[100vh] lg:sticky lg:top-[72px] lg:max-h-[calc(100vh-72px)]">
           
-          <div className="py-10 px-8 lg:p-12 lg:pl-14 flex flex-col justify-center">
-            <span className="font-body text-[12px] font-semibold tracking-widest text-white/45 uppercase block mb-10">
+          <div className="py-6 sm:py-10 md:py-12 px-4 sm:px-8 md:px-12 lg:pl-14 flex flex-col justify-center">
+            <span className="font-body text-[11px] sm:text-[12px] font-semibold tracking-widest text-white/45 uppercase block mb-6 sm:mb-10">
               Featured Work
             </span>
             <ul className="flex flex-col">
@@ -47,27 +47,27 @@ export default function FeaturedWork({ workContainerRef }) {
                   <li 
                     key={idx} 
                     onClick={() => setActiveWorkIndex(idx)}
-                    className={`flex items-baseline gap-4 py-3 md:py-4 cursor-pointer transition-all duration-500 border-b border-white/5 ${idx === 0 ? 'border-t' : ''} ${isActive ? 'opacity-100' : isPrev ? 'opacity-40' : 'opacity-20 hover:opacity-50'}`}
+                    className={`flex items-baseline gap-2 sm:gap-4 py-2 sm:py-3 md:py-4 cursor-pointer transition-all duration-500 border-b border-white/5 ${idx === 0 ? 'border-t' : ''} ${isActive ? 'opacity-100' : isPrev ? 'opacity-40' : 'opacity-20 hover:opacity-50'}`}
                   >
-                    <span className={`font-display font-bold text-white tracking-tight leading-[1.1] transition-all duration-300 ${isActive ? 'text-[clamp(24px,4vw,50px)]' : 'text-[clamp(18px,3vw,40px)] whitespace-pre-line'}`}>
+                    <span className={`font-display font-bold text-white tracking-tight leading-[1.1] transition-all duration-300 ${isActive ? 'text-[clamp(20px,4vw,50px)]' : 'text-[clamp(16px,3vw,40px)] whitespace-pre-line'}`}>
                       {work.name}
                     </span>
-                    <span className="font-body text-[12px] text-white/40 whitespace-nowrap">
+                    <span className="font-body text-[10px] sm:text-[12px] text-white/40 whitespace-nowrap">
                       {work.year}
                     </span>
-                    <span className={`ml-auto w-8 h-8 rounded-full border border-white/15 flex items-center justify-center text-sm shrink-0 transition-all duration-300 ${isActive ? 'opacity-100 bg-[#5affc8] border-[#5affc8] text-[#111]' : 'opacity-0 text-white/50'}`}>
+                    <span className={`ml-auto w-6 sm:w-8 h-6 sm:h-8 rounded-full border border-white/15 flex items-center justify-center text-xs sm:text-sm shrink-0 transition-all duration-300 ${isActive ? 'opacity-100 bg-[#5affc8] border-[#5affc8] text-[#111]' : 'opacity-0 text-white/50'}`}>
                       ↗
                     </span>
                   </li>
                 );
               })}
             </ul>
-            <a href="#" className="inline-flex items-center gap-2 mt-8 font-body text-[13px] font-semibold text-white/50 tracking-wide uppercase border border-white/15 rounded-full px-5 py-2.5 hover:text-white hover:border-white/50 transition-colors w-max">
+            <a href="#" className="inline-flex items-center gap-2 mt-6 sm:mt-8 font-body text-[12px] sm:text-[13px] font-semibold text-white/50 tracking-wide uppercase border border-white/15 rounded-full px-4 sm:px-5 py-2 sm:py-2.5 hover:text-white hover:border-white/50 transition-colors w-max">
               Explore Our Work ↗
             </a>
           </div>
 
-          <div className="relative p-6 lg:py-6 lg:pr-8 lg:pl-4 overflow-hidden hidden lg:block">
+          <div className="relative p-4 sm:p-6 lg:py-6 lg:pr-8 lg:pl-4 overflow-hidden hidden lg:block">
             {WORK_ITEMS.map((panel, idx) => (
               <div 
                 key={idx}

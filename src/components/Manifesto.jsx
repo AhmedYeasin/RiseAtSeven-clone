@@ -2,13 +2,13 @@ import React from 'react';
 
 export default function Manifesto() {
   return (
-    <section className="bg-[#f0eeeb] text-white px-6 py-24 md:py-[120px]">
-      <div className="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12">
-        <div className="flex flex-col gap-6 bg-[#111] p-6 rounded-[24px]">
-          <h3 className="text-[clamp(32px,4vw,48px)] font-bold tracking-tight">Pioneers</h3>
-          <p className="font-body text-white/70 text-[clamp(16px,2vw,20px)] leading-[1.6]">
-            We’re dedicated to creating the industry narrative that others follow 3 years from now. We paved the path for creative SEO, multi-channel search with Digital PR, and Social Search and we will continue to do it.<br/><br/>
-            We’re on a mission to be the first search-first agency to win a Cannes Lion disrupting the status quo.
+    <section className="bg-[#f0eeeb] text-white px-4 sm:px-6 md:px-6 py-12 sm:py-20 md:py-[120px]">
+      <div className="max-w-[1300px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12">
+        <div className="flex flex-col gap-4 sm:gap-6 bg-[#111] p-5 sm:p-6 md:p-6 rounded-[20px] md:rounded-[24px]">
+          <h3 className="text-[clamp(28px,4vw,48px)] font-bold tracking-tight">Pioneers</h3>
+          <p className="font-body text-white/70 text-[clamp(14px,2vw,20px)] leading-[1.6]">
+            We're dedicated to creating the industry narrative that others follow. We pioneered creative SEO and multi-channel search.<br/><br/>
+            On a mission to be the first search-first agency to win a Cannes Lion.
           </p>
         </div>
         

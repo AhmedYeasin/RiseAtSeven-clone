@@ -5,6 +5,7 @@ export default function Navbar({ navDark }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hoveredMenu, setHoveredMenu] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [openMobileMenu, setOpenMobileMenu] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +14,18 @@ export default function Navbar({ navDark }) {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Close menu when clicking outside
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
 
   const menus = {
     Services: [
@@ -39,13 +52,15 @@ export default function Navbar({ navDark }) {
     ]
   };
 
+  const isDark = navDark || isMenuOpen;
+
   return (
     <>
-      <nav className={`sticky top-0 w-full z-[100] transition-all duration-300 border-b ${navDark || isMenuOpen
+      <nav className={`sticky top-0 w-full z-[100] transition-all duration-300 border-b ${isDark
           ? `text-white border-white/10 ${isScrolled ? 'bg-[#0a0a0a]/75 backdrop-blur-lg shadow-sm' : 'bg-[#0a0a0a]'}`
           : `text-[#111] border-black/5 ${isScrolled ? 'bg-white/75 backdrop-blur-lg shadow-sm' : 'bg-white'}`
         }`} onMouseLeave={() => setHoveredMenu(null)}>
-        <div className="max-w-[1440px] mx-auto px-5 md:px-8 h-[72px] flex items-center gap-10">
+        <div className="max-w-[1440px] mx-auto px-5 md:px-8 h-[72px] flex items-center justify-between gap-10">
           <a href="#" className="font-extrabold text-[25px] whitespace-nowrap shrink-0 flex items-center">
             Rise at Seven<span className="text-[20px] ml-1">↗</span>
           </a>
@@ -53,21 +68,21 @@ export default function Navbar({ navDark }) {
           <ul className="hidden lg:flex items-center gap-0.5 flex-1 justify-center relative h-full">
             {['Services', 'International', 'About'].map(item => (
               <li key={item} className="h-full flex items-center" onMouseEnter={() => setHoveredMenu(item)}>
-                <a href="#" className={`text-sm font-medium px-3 py-2 rounded-lg flex items-center gap-1 transition-colors ${(navDark || isMenuOpen) ? 'hover:bg-white/10 text-white/85' : 'hover:bg-black/5 text-[#111]'
+                <a href="#" className={`text-sm font-medium px-3 py-2 rounded-lg flex items-center gap-1 transition-colors ${isDark ? 'hover:bg-white/10 text-white/85' : 'hover:bg-black/5 text-[#111]'
                   }`}>
                   {item} <span className="text-[12px] opacity-60">+</span>
                 </a>
               </li>
             ))}
             <li className="h-full flex items-center" onMouseEnter={() => setHoveredMenu(null)}>
-              <a href="#" className={`text-sm font-medium px-3 py-2 rounded-lg flex items-center gap-1 transition-colors ${(navDark || isMenuOpen) ? 'hover:bg-white/10 text-white/85' : 'hover:bg-black/5 text-[#111]'
+              <a href="#" className={`text-sm font-medium px-3 py-2 rounded-lg flex items-center gap-1 transition-colors ${isDark ? 'hover:bg-white/10 text-white/85' : 'hover:bg-black/5 text-[#111]'
                 }`}>
                 Work <span className="bg-[#5affc8] text-[#111] text-[10px] font-bold w-[18px] h-[18px] rounded-full flex items-center justify-center ml-1">25</span>
               </a>
             </li>
             {['Careers', 'Blog', 'Webinar'].map(item => (
               <li key={item} className="h-full flex items-center" onMouseEnter={() => setHoveredMenu(null)}>
-                <a href="#" className={`text-sm font-medium px-3 py-2 rounded-lg flex items-center gap-1 transition-colors ${(navDark || isMenuOpen) ? 'hover:bg-white/10 text-white/85' : 'hover:bg-black/5 text-[#111]'
+                <a href="#" className={`text-sm font-medium px-3 py-2 rounded-lg flex items-center gap-1 transition-colors ${isDark ? 'hover:bg-white/10 text-white/85' : 'hover:bg-black/5 text-[#111]'
                   }`}>{item}</a>
               </li>
             ))}
@@ -95,27 +110,17 @@ export default function Navbar({ navDark }) {
           </ul>
           
           <button
-            class={`hidden lg:flex cursor-pointer bg-black px-6 py-3 rounded-full hover:rounded-xl border-[1px] border-slate-500 text-white font-medium group ${navDark || isMenuOpen ? 'bg-white text-[#111] border-white hover:bg-gray-200' : 'bg-[#111] text-white border-[#111]'}`}
+            className={`hidden lg:flex cursor-pointer px-6 py-3 rounded-full hover:rounded-xl border-[1px] font-medium group transition-all ${isDark ? 'bg-white text-[#111] border-white hover:bg-gray-200' : 'bg-[#111] text-white border-[#111]'}`}
           >
-            <div class="relative overflow-hidden">
-              <p
-                class="group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]"
-              >
+            <div className="relative overflow-hidden">
+              <p className="group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
                 Get In Touch <span className="ml-1">↗</span>
               </p>
-              <p
-                class="absolute top-7 left-0 group-hover:top-0 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]"
-              >
+              <p className="absolute top-7 left-0 group-hover:top-0 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">
                 Get In Touch <span className="ml-1">↗</span>
               </p>
             </div>
           </button>
-
-
-          {/* <a href="#" className={`hidden lg:flex text-sm font-semibold rounded-full px-5 py-2.5 transition-colors border-2 shrink-0 ${navDark || isMenuOpen ? 'bg-white text-[#111] border-white hover:bg-gray-200' : 'bg-[#111] text-white border-[#111] hover:bg-[#333]'
-            }`}>
-            Get In Touch 
-          </a> */}
 
           <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="lg:hidden ml-auto flex flex-col gap-[5px] p-2 relative z-[110]">
             <span className={`block w-6 h-[2px] rounded-sm transition-transform duration-300 ${navDark || isMenuOpen ? 'bg-white' : 'bg-[#111]'} ${isMenuOpen ? 'translate-y-[7px] rotate-45' : ''}`}></span>
