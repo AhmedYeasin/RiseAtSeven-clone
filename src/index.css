@@ -1,2 +1,86 @@
 @import "tailwindcss";
-/* @plugin "daisyui"; */
+
+@layer base {
+  :root {
+    --nav-h: 72px;
+    --black: #0a0a0a;
+    --beige: #f0eeeb;
+  }
+  
+  html {
+    scroll-behavior: auto; /* Handled by Lenis */
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: 'Syne', sans-serif;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 35s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-ticker {
+  animation: marquee 25s linear infinite;
+}
+
+@keyframes blob {
+  0% { transform: translate(0px, 0px) scale(1); }
+  33% { transform: translate(30px, -50px) scale(1.1); }
+  66% { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+.Horizontal {
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.Horizontal__text {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  gap: 4vw;
+  padding-left: 100vw;
+}
+
+.heading-xl {
+  font-size: clamp(12rem, 20vw, 25rem);
+  font-weight: 800;
+  /* line-height: 1.1; */
+}
