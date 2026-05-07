@@ -23,7 +23,7 @@ export default function ServicesTicker() {
         trigger: wrapper,
         pin: true,
         start: "top top",
-        end: "+=5000px",
+        end: "+=3000px",
         scrub: true
       }
     });
@@ -40,7 +40,7 @@ export default function ServicesTicker() {
           containerAnimation: scrollTween,
           start: "left 100%",
           end: "left 30%",
-          scrub: 1
+          scrub: 2
         }
       });
     });
@@ -52,7 +52,7 @@ export default function ServicesTicker() {
 
   return (
     <div ref={scope}>
-      <section className="Horizontal py-12 bg-[#f0eeeb] sm:py-20 md:py-32">
+      <section className="Horizontal bg-[#f0eeeb] sm:py-8 overflow-hidden">
         <div className="container px-4 sm:px-6 md:px-12">
           <h3 className="Horizontal__text heading-xl text-black font-extrabold text-[clamp(40px,10vw,120px)] leading-[1] tracking-[-0.03em]">
             Ready to Rise at Seven?

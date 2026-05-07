@@ -1,5 +1,14 @@
 import React from 'react';
-
+{/* <style>
+  .link::after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: currentColor;
+    margin-top: 2px;
+  }
+</style> */}
 export default function Footer({ footerRef }) {
   return (
     <footer ref={footerRef} className="bg-[#0a0a0a] rounded-[16px] md:rounded-2xl text-white pt-12 sm:pt-[72px] px-4 sm:px-6 md:px-14">
@@ -18,7 +27,7 @@ export default function Footer({ footerRef }) {
             ))}
           </div>
         </div>
-        
+
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           <div className="flex flex-col gap-2 sm:gap-3.5">
             {['Services', 'Work', 'About', 'Culture', 'Meet The Team'].map(item => (
@@ -45,10 +54,10 @@ export default function Footer({ footerRef }) {
 
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center py-3 sm:py-5 md:py-7 border-t border-white/10 gap-3 sm:gap-4 text-[11px] sm:text-[12px]">
         <p className="text-white/40">
-          © 2025 Rise at Seven Ltd. All rights reserved &nbsp;•&nbsp; <a href="#" className="hover:border-b hover:border-white text-white transition-colors">Terms &amp; conditions</a>
+          © 2025 Rise at Seven Ltd. All rights reserved &nbsp;•&nbsp; <a href="#" className="link  text-white transition-colors">Terms &amp; conditions</a>
         </p>
         <p className="text-white/40">
-          Website <a href="#" className="hover:border-b hover:border-white text-white transition-colors">MadeByShape</a>
+          Website <a href="#" className="link text-white transition-colors">MadeByShape</a>
         </p>
       </div>
     </footer>

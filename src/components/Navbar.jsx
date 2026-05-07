@@ -110,7 +110,7 @@ export default function Navbar({ navDark }) {
           </ul>
           
           <button
-            className={`hidden lg:flex cursor-pointer px-6 py-3 rounded-full hover:rounded-xl border-[1px] font-medium group transition-all ${isDark ? 'bg-white text-[#111] border-white hover:bg-gray-200' : 'bg-[#111] text-white border-[#111]'}`}
+            className={`hidden md:lg:flex cursor-pointer p-4 rounded-full hover:rounded-xl font-medium group transition duration-500 ${isDark ? 'bg-white text-[#111] border-white hover:bg-gray-200' : 'bg-[#111] text-white border-[#111]'}`}
           >
             <div className="relative overflow-hidden">
               <p className="group-hover:-translate-y-7 duration-[1.125s] ease-[cubic-bezier(0.19,1,0.22,1)]">

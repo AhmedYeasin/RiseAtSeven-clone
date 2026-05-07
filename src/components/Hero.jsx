@@ -7,7 +7,7 @@ export default function Hero() {
 
   return (
     <section className="relative flex flex-col items-center justify-center bg-[#0a0a0a] overflow-hidden" style={{ minHeight: 'calc(100vh - 72px - 48px)' }}>
-      {/* Exact Circle Reveal Animation from original site */}
+      
       <svg className="absolute inset-0 w-full h-full z-50 pointer-events-none" preserveAspectRatio="none">
         <defs>
           <mask id="circle-reveal-mask">

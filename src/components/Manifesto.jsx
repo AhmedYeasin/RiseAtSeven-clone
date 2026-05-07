@@ -27,13 +27,13 @@ export default function Manifesto() {
         </div>
       </div>
       
-      <div className="mt-24 md:mt-40 overflow-hidden relative text-gray-900">
-        <div className="flex w-max animate-marquee" style={{ animationDuration: '40s' }}>
+      <div className="mt-24 overflow-hidden relative text-gray-900">
+        <div className="flex w-max animate-marquee" style={{ animationDuration: '25s' }}>
           {[1, 2].map(group => (
-            <div key={group} className="flex items-center px-4 font-display font-extrabold text-[clamp(60px,12vw,180px)] leading-[1] tracking-[-0.03em] whitespace-nowrap opacity-30">
+            <div key={group} className="flex items-center px-4 font-display font-extrabold text-[clamp(60px,12vw,180px)] leading-[1] tracking-[-0.03em] whitespace-nowrap opacity-40">
               <span className="" style={{ WebkitTextStroke: 'rgba(14, 14, 14, 0.99)' }}>Chasing Consumers</span>
               <span className="text-[#5affc8] mx-8">&bull;</span>
-              <span className="text-transparent" style={{ WebkitTextStroke: 'rgb(15, 15, 15)' }}>Not Algorithms</span>
+              <span className="" style={{ WebkitTextStroke: 'rgb(15, 15, 15)' }}>Not Algorithms</span>
               <span className="text-[#5affc8] mx-8">&bull;</span>
             </div>
           ))}
