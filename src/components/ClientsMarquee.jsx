@@ -32,15 +32,15 @@ export default function ClientsMarquee() {
         `}
       </style>
       {/* Fixed Title Section */}
-      <div className="bg-[#f0eeeb] z-10 pl-4 sm:pl-6 md:pl-8 pr-4 border-r border-black/10 shrink-0">
-        <span className="font-body text-[11px] sm:text-[12px] md:text-[13px] font-medium text-[#666] whitespace-nowrap uppercase tracking-wider">
+      <div className="bg-[#f0eeeb] z-10 pl-4 sm:pl-2 md:pl-4 pr-4 border-r border-black/20 shrink-0">
+        <span className="font-body text-[11px] sm:text-[12px] md:text-[13px] font-medium whitespace-nowrap uppercase tracking-wider">
           The agency behind
         </span>
       </div>
 
       {/* Dynamic Marquee Section */}
       <Marquee 
-        speed={50} 
+        speed={40} 
         pauseOnHover={false}
         gradient={true}
         gradientColor="#f0eeeb"

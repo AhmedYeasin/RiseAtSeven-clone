@@ -32,7 +32,7 @@ export default function Manifesto() {
         scrollTrigger: {
           trigger: sectionRef.current,
           start: "top top",
-          end: `+=${cards.length * 15}%`, 
+          end: `+=${cards.length * 10}%`, 
           scrub: 1,
           pin: true,
           pinSpacing: true,
@@ -44,9 +44,9 @@ export default function Manifesto() {
       cards.forEach((card, index) => {
         if (index < cards.length - 1) {
           tl.to(card, {
-            y: -700,      
+            y: -600,      
             opacity: 0,    
-            duration: 2,   
+            duration: 0.8,   
           }, index); 
         }
       });
@@ -60,7 +60,7 @@ export default function Manifesto() {
           trigger: panelsRef.current,
           start: "top bottom", 
           end: "bottom top",   
-          scrub: 1,
+          scrub: 0.04,
         }
       });
     }, sectionRef);
@@ -69,11 +69,13 @@ export default function Manifesto() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="bg-[#f0eeeb] relative overflow-hidden">
+    <section ref={sectionRef} className="bg-[#f0eeeb] relative overflow-hidden pt-12 sm:pt-20 md:pt-20">
+     <h1 className='text-3xl font-display font-extrabold text-center tracking-tight text-[#111] mb-0 relative z-10'>
+    Legacy in the Making
+  </h1>
       
       {/* Cards Section */}
       <div ref={containerRef} className="max-w-[600px] mx-auto px-4 sm:px-6 relative h-[70vh] sm:h-screen">
-      <h1 className='text-3xl font-semibold text-center'>Legacy in the Making</h1>
         <div className="relative w-full h-150 flex items-center justify-center">
           
           {/* Card 1 */}
