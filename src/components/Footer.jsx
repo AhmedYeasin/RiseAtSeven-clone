@@ -1,14 +1,5 @@
 import React from 'react';
-{/* <style>
-  .link::after{
-    content: '';
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: currentColor;
-    margin-top: 2px;
-  }
-</style> */}
+
 export default function Footer({ footerRef }) {
   return (
     <footer ref={footerRef} className="bg-[#0a0a0a] rounded-[16px] md:rounded-2xl text-white pt-12 sm:pt-[72px] px-4 sm:px-6 md:px-14">
@@ -21,7 +12,7 @@ export default function Footer({ footerRef }) {
           </div>
           <div className="flex gap-2 flex-wrap">
             {['f', '𝕏', 'in', '▶', '♪', '◎'].map(icon => (
-              <a key={icon} href="#" className="inline-flex items-center gap-1 border border-white/20 rounded-full hover:rounded px-3 py-1.5 text-xs font-bold bg-white text-black hover:border-white/60 transition-colors">
+              <a key={icon} href="#" className="inline-flex items-center gap-1 border border-white/20 rounded-full hover:rounded px-3 py-1 text-xs font-bold bg-white text-black hover:border-white/60 transition-colors">
                 {icon} <span className="text-[10px]">↗</span>
               </a>
             ))}
@@ -31,17 +22,17 @@ export default function Footer({ footerRef }) {
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
           <div className="flex flex-col gap-2 sm:gap-3.5">
             {['Services', 'Work', 'About', 'Culture', 'Meet The Team'].map(item => (
-              <a key={item} href="#" className="font-body text-sm sm:text-base font-medium text-white/80 hover:text-white transition-colors">{item}</a>
+              <a key={item} href="#" className="font-body text-sm sm:text-base font-medium text-white/80 hover:text-[#5affc8] transition-colors">{item}</a>
             ))}
           </div>
           <div className="flex flex-col gap-2 sm:gap-3.5">
             {['Testimonials', 'Blog', 'Webinars', 'Careers'].map(item => (
-              <a key={item} href="#" className="font-body text-sm sm:text-base font-medium text-white/80 hover:text-white transition-colors">{item}</a>
+              <a key={item} href="#" className="font-body text-sm sm:text-base font-medium text-white/80 hover:text-[#5affc8] transition-colors">{item}</a>
             ))}
           </div>
           <div className="flex flex-col gap-2 sm:gap-3.5 col-span-2 sm:col-span-1">
             {['Sheffield', 'Manchester', 'London', 'New York', 'Contact'].map(item => (
-              <a key={item} href="#" className="font-body text-sm sm:text-base font-medium text-white/80 hover:text-white transition-colors">{item}</a>
+              <a key={item} href="#" className="font-body text-sm sm:text-base font-medium text-white/80 hover:text-[#5affc8] transition-colors">{item}</a>
             ))}
           </div>
         </div>

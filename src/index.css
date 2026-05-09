@@ -18,7 +18,7 @@
 
 @layer utilities {
   .font-display {
-    font-family: 'Syne', sans-serif;
+    font-family: 'Syne' , ;
   }
 }
 
@@ -39,7 +39,7 @@
   animation: marquee 35s linear infinite;
 }
 .animate-marquee:hover {
-  animation-play-state: paused;
+  animation-play-state:;
 }
 
 .animate-ticker {
