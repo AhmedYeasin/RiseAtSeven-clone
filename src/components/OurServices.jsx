@@ -41,7 +41,7 @@ export default function OurServices() {
           {SERVICES.map((service, i) => (
             <div key={i} className="group lg:w-full lg:h-25 rounded-xl hover:rounded-full md:rounded-xl p-4 sm:p-8 cursor-pointer flex bg-white justify-between sm:aspect-square hover:bg-black hover:text-white transition-all items-center traking-tight tracking-wide transition-color duration-300">
             
-              <h3 className="text-[clamp(18px,2vw,34px)] font-bold flex items-center">{service}</h3>
+              <h3 className="text-[clamp(18px,2vw,34px)] font-semibold flex items-center">{service}</h3>
               <div className="w-8 sm:w-10 sm:h-10 rounded-full border border-current flex items-center justify-center self-end opacity-0 group-hover:opacity-100 transition-opacity text-xl sm:text-black group-hover:bg-[#5affc8]">
                 ↗
               </div>
