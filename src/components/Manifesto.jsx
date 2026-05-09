@@ -70,12 +70,12 @@ export default function Manifesto() {
 
   return (
     <section ref={sectionRef} className="bg-[#f0eeeb] relative overflow-hidden pt-12 sm:pt-20 md:pt-20">
-     <h1 className='text-3xl font-display font-extrabold text-center tracking-tight text-[#111] mb-0 relative z-10'>
-    Legacy in the Making
-  </h1>
       
       {/* Cards Section */}
       <div ref={containerRef} className="max-w-[600px] mx-auto px-4 sm:px-6 relative h-[70vh] sm:h-screen">
+     <h1 className='text-3xl font-display font-extrabold text-center tracking-tight text-[#111] mb-0 relative z-10'>
+    Legacy in the Making
+  </h1>
         <div className="relative w-full h-150 flex items-center justify-center">
           
           {/* Card 1 */}
@@ -115,7 +115,7 @@ export default function Manifesto() {
       <div className="py-32 overflow-hidden relative text-gray-900 bg-[#f0eeeb]">
         <div ref={panelsRef} className="panels flex animate-marquee w-max whitespace-nowrap">
           {[1, 2].map(group => (
-            <div key={group} className="flex items-center px-4 font-display font-extrabold text-[clamp(60px,12vw,180px)] leading-[1] tracking-[-0.03em] opacity-40">
+            <div key={group} className="flex items-center px-4 font-display font-medium text-[clamp(60px,20vw,210px)] leading-[1] tracking-[-0.03em]">
               <span style={{ WebkitTextStroke: '1px rgba(14, 14, 14, 0.99)' }}>Chasing Consumers</span>
               <span className="text-[#5affc8] mx-8">&bull;</span>
               <span style={{ WebkitTextStroke: '1px rgb(15, 15, 15)' }}>Not Algorithms</span>

@@ -54,7 +54,7 @@ export default function ServicesTicker() {
     <div ref={scope}>
       <section className="Horizontal bg-[#f0eeeb] sm:py-0 overflow-hidden min-h-[100px] md:min-h-[150px]">
         <div className="px-4 sm:px-6 md:px-4">
-          <h3 className="Horizontal__text heading-xl text-black font-extrabold text-[clamp(40px,5vw,120px)] leading-[1] tracking-[-0.03em]">
+          <h3 className="Horizontal__text heading-xl text-black font-medium text-[clamp(40px,5vw,120px)] leading-[1] tracking-[-0.03em]">
             Ready to Rise at Seven?
           </h3>
         </div>
