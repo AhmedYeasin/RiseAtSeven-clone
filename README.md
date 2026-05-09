@@ -1,6 +1,6 @@
 # Rise at Seven Clone
 
-A modern, interactive website clone for Rise at Seven, a leading content marketing agency. This project showcases advanced web development techniques with smooth animations, responsive design, and cutting-edge technologies.
+A modern, interactive Home page is given task by a client. This project showcases advanced web development techniques with smooth animations, responsive design, and cutting-edge technologies. (Only for Interview and Learning pupose)
 
 ## 🚀 Technologies Used
 
@@ -21,7 +21,7 @@ A modern, interactive website clone for Rise at Seven, a leading content marketi
 
 ### Development Tools
 - **Linting**: ESLint 10 with React hooks and refresh plugins
-- **Type Checking**: TypeScript types for React
+
 - **Deployment**: Vercel
 
 ## 🎨 Animations & Interactions
@@ -97,15 +97,10 @@ src/
    npm run preview
    ```
 
-## 🚀 Deployment
-
-This project is configured for deployment on Vercel:
-
-1. Connect your GitHub repository to Vercel
-2. Vercel will automatically detect the Vite configuration
-3. Deploy with zero configuration
-
-**Live Demo**: [https://clone-riseatseven.vercel.app/](https://clone-riseatseven-4kj6g56bu-ahmed-yeasins-projects.vercel.app)
+**Live Demo**: [https://clone-riseatseven.vercel.app/]
+or
+https://capable-liger-2415ad.netlify.app/
+(https://clone-riseatseven-4kj6g56bu-ahmed-yeasins-projects.vercel.app)
 
 ## 🎯 Key Features
 
