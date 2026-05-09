@@ -65,6 +65,7 @@ function App() {
       <About />
       <FeaturedWork workContainerRef={workContainerRef} />
       <OurServices />
+      
       <Manifesto />
       <ServicesTicker />
       <Footer footerRef={footerRef} />
