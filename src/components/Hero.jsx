@@ -21,7 +21,7 @@ export default function Hero() {
             />
           </mask>
         </defs>
-        <rect width="100%" height="100%" fill="#ffffff" mask="url(#circle-reveal-mask)" />
+        <rect width="100%" height="100%" fill="#5affc8" mask="url(#circle-reveal-mask)" />
       </svg>
 
       <motion.div style={{ y: heroBgY, scale: 1.06 }} className="absolute inset-0 z-0 bg-[#050505]">
