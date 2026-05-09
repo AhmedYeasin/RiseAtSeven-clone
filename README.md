@@ -1,7 +1,8 @@
 # Rise at Seven Clone
 
 A modern, interactive Home page is given task by a client. This project showcases advanced web development techniques with smooth animations, responsive design, and cutting-edge technologies. (Only for Interview and Learning pupose)
-
+&nbsp; 
+ [https://clone-riseatseven.vercel.app/]
 ## 🚀 Technologies Used
 
 ### Core Technologies
@@ -99,8 +100,7 @@ src/
 
 **Live Demo**: [https://clone-riseatseven.vercel.app/]
 or
-https://capable-liger-2415ad.netlify.app/
-(https://clone-riseatseven-4kj6g56bu-ahmed-yeasins-projects.vercel.app)
+https://effulgent-zabaione-a2d3cb.netlify.app/
 
 ## 🎯 Key Features
 
