@@ -1,16 +1,139 @@
-# React + Vite
+# Rise at Seven Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive website clone for Rise at Seven, a leading content marketing agency. This project showcases advanced web development techniques with smooth animations, responsive design, and cutting-edge technologies.
 
-Currently, two official plugins are available:
+## 🚀 Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Core Technologies
+- **Language**: JavaScript (ES6+)
+- **Framework**: React 19
+- **Build Tool**: Vite 8
+- **Styling**: Tailwind CSS 4, DaisyUI 5
 
-## React Compiler
+### Libraries & Dependencies
+- **Animations**:
+  - GSAP 3 (GreenSock Animation Platform) - Advanced scroll-triggered animations
+  - Framer Motion 12 - React animation library for component animations
+  - React Fast Marquee 1 - Horizontal scrolling marquee effects
+- **Smooth Scrolling**: Lenis 1 - Custom smooth scrolling implementation
+- **Icons**: Lucide React 1 - Modern icon library
+- **Utilities**: clsx, tailwind-merge - Class name management
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Development Tools
+- **Linting**: ESLint 10 with React hooks and refresh plugins
+- **Type Checking**: TypeScript types for React
+- **Deployment**: Vercel
 
-## Expanding the ESLint configuration
+## 🎨 Animations & Interactions
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### GSAP Animations
+- **Scroll-Triggered Animations**: Using ScrollTrigger plugin for pinning, scrubbing, and timeline-based animations
+- **Card Stacking**: Sequential card reveal with opacity and transform effects in the Manifesto section
+- **Horizontal Scrolling**: Infinite horizontal scroll with text splitting using SplitText plugin in ServicesTicker
+- **Marquee Effects**: Custom marquee animations with GSAP for smooth, performant scrolling
+
+### Framer Motion
+- **Hero Section**: Circle reveal mask animation, parallax background effects using scroll transforms
+- **Component Transitions**: Smooth entrance animations for text and elements
+
+### CSS Animations
+- **Blob Animations**: Custom CSS keyframe animations for background blob effects
+- **Responsive Scaling**: Clamp-based responsive typography and sizing
+
+### React Fast Marquee
+- **Client Logos**: Horizontal marquee display of client logos with pause-on-hover disabled
+- **Gradient Fading**: Smooth gradient edges for seamless looping
+
+### Lenis Smooth Scrolling
+- **Enhanced UX**: Custom easing functions for buttery smooth vertical scrolling
+- **Performance Optimized**: Hardware-accelerated scrolling with gesture support
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── AnnouncementBar.jsx
+│   ├── Navbar.jsx
+│   ├── Hero.jsx
+│   ├── ClientsMarquee.jsx
+│   ├── About.jsx
+│   ├── FeaturedWork.jsx
+│   ├── OurServices.jsx
+│   ├── Manifesto.jsx
+│   ├── ServicesTicker.jsx
+│   └── Footer.jsx
+├── App.jsx
+├── main.jsx
+├── index.css
+└── App.css
+```
+
+## 🛠️ Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/clone-riseatseven.git
+   cd clone-riseatseven
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+5. **Preview production build**
+   ```bash
+   npm run preview
+   ```
+
+## 🚀 Deployment
+
+This project is configured for deployment on Vercel:
+
+1. Connect your GitHub repository to Vercel
+2. Vercel will automatically detect the Vite configuration
+3. Deploy with zero configuration
+
+**Live Demo**: [https://clone-riseatseven.vercel.app/](https://clone-riseatseven-4kj6g56bu-ahmed-yeasins-projects.vercel.app)
+
+## 🎯 Key Features
+
+- **Responsive Design**: Mobile-first approach with clamp-based responsive units
+- **Performance Optimized**: Fast loading with Vite's optimized build
+- **Accessibility**: Semantic HTML and ARIA-compliant components
+- **Modern UI**: Clean, professional design matching the original Rise at Seven brand
+- **Interactive Elements**: Hover effects, scroll animations, and smooth transitions
+
+## 📝 Scripts
+
+- `npm run dev` - Start development server with hot reload
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint for code quality
+- `npm run preview` - Preview production build locally
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run linting: `npm run lint`
+5. Test your changes
+6. Submit a pull request
+
+## 📄 License
+
+This project is for educational purposes as a clone of the Rise at Seven website. Please respect intellectual property rights.
+
+## AI Integration
+Note: I used Gemini and Claude AI for explore animations.
