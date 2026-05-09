@@ -20,9 +20,9 @@ export default function Manifesto() {
     const ctx = gsap.context(() => {
       const cards = cardRefs.current;
 
-      // 1. Initial Stack Setup (Ektir niche ekti chapa pore thaka look)
+      // 1. Initial Stack Setup
       gsap.set(cards, {
-        y: (i) => i * 60, // Prottek card ke 60px niche kore rakhbo
+        y: (i) => i * 60, 
         scale: (i) => 1 - i * 0.01,
         zIndex: (i) => cards.length - i,
       });
@@ -47,19 +47,19 @@ export default function Manifesto() {
             y: -700,      
             opacity: 0,    
             duration: 2,   
-          }, index); // Ekti shesh hole arekti shuru hobe
+          }, index); 
         }
       });
 
-      // 3. Marquee Scroll Animation (X-axis movement)
-      // Eti alada vabe thakbe jate marquee section screen e ashar por move kore
+      // 3. Marquee Scroll Animation
+      
       gsap.to(panelsRef.current, {
         xPercent: 50,
         ease: "none",
         scrollTrigger: {
           trigger: panelsRef.current,
-          start: "top bottom", // Screen er nich theke ashar shomoy shuru hobe
-          end: "bottom top",    // Upore chole gele shesh hobe
+          start: "top bottom", 
+          end: "bottom top",   
           scrub: 1,
         }
       });
