@@ -6,9 +6,9 @@ export default function Footer({ footerRef }) {
       <div className="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-8 sm:gap-12 md:gap-20 pb-8 sm:pb-16 border-b border-white/10">
         <div>
           <h3 className="font-display text-2xl sm:text-4xl font-bold mb-4 sm:mb-5">Stay updated</h3>
-          <div className="flex items-center bg-white/5 border border-white/10 rounded-full p-1 pl-4 sm:pl-5 mb-4 sm:mb-6 max-w-[500px]">
-            <input type="email" placeholder="Your Email" className="flex-1 bg-transparent border-none outline-none text-white font-body text-sm sm:text-xl placeholder:text-white/30 tracking-wide" />
-            <button className="w-12 sm:w-15 h-12 sm:h-15 rounded-full bg-[#5affc8] text-[#111] text-xl font-bold flex items-center justify-center hover:bg-white hover:scale-105 transition-all hover:rotate-90">↗</button>
+          <div className="flex items-center bg-white/5 border border-white/10 rounded-full p-1 pl-3 sm:pl-2 mb-4 sm:mb-6 max-w-[500px]">
+            <input type="email" placeholder="Your Email Address" className="flex-1 bg-transparent border-none outline-none text-white font-body text-sm sm:text-xl placeholder:text-white/30 tracking-wide tracking-tight leading-tight" />
+            <button className="w-12 sm:w-15 h-12 sm:h-15 rounded-full bg-[#5affc8] text-[#111] text-xl font-bold flex items-center justify-center hover:bg-white hover:scale-105 transition-all hover:rotate-90 duration-300">↗</button>
           </div>
           <div className="flex gap-2 flex-wrap">
             {['f', '𝕏', 'in', '▶', '♪', '◎'].map(icon => (
@@ -19,20 +19,20 @@ export default function Footer({ footerRef }) {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 ">
-          <div className="flex flex-col gap-2 sm:gap-3.5 border-l border-white/30 pl-6 sm:pl-8 md:pl-14">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+          <div className="flex flex-col gap-2 sm:gap-3.5 border-l border-white/30 pl-2 sm:pl-2 md:pl-4">
             {['Services', 'Work', 'About', 'Culture', 'Meet The Team'].map(item => (
-              <a key={item} href="#" className="font-body text-sm sm:text-base font-medium text-white/80 hover:text-[#5affc8] hover:text-xl transition-all">{item}</a>
+              <a key={item} href="#" className="font-body text-sm sm:text-base font-medium text-white hover:text-[#5affc8] hover:text-lg transition-all">{item}</a>
             ))}
           </div>
-          <div className="flex flex-col gap-2 sm:gap-3.5 border-l border-white/30 pl-6 sm:pl-8 md:pl-14">
+          <div className="flex flex-col gap-2 sm:gap-3.5 border-l border-white/30 pl-2 sm:pl-2 md:pl-4">
             {['Testimonials', 'Blog', 'Webinars', 'Careers'].map(item => (
-              <a key={item} href="#" className="font-body text-sm sm:text-base font-medium text-white/80 hover:text-[#5affc8] hover:text-xl transition-all">{item}</a>
+              <a key={item} href="#" className="font-body text-sm sm:text-base font-medium text-white hover:text-[#5affc8] hover:text-lg transition-all">{item}</a>
             ))}
           </div>
-          <div className="flex flex-col gap-2 sm:gap-3.5 col-span-2 sm:col-span-1 border-l border-white/30 pl-6 sm:pl-8 md:pl-14">
+          <div className="flex flex-col gap-2 sm:gap-3.5 col-span-2 sm:col-span-1 border-l border-white/30 pl-2 sm:pl-2 md:pl-4">
             {['Sheffield', 'Manchester', 'London', 'New York', 'Contact'].map(item => (
-              <a key={item} href="#" className="font-body text-sm sm:text-base font-medium text-white/80 hover:text-[#5affc8] hover:text-xl transition-all">{item}</a>
+              <a key={item} href="#" className="font-body text-sm sm:text-base font-medium text-white hover:text-[#5affc8] hover:text-lg transition-all">{item}</a>
             ))}
           </div>
         </div>

@@ -22,7 +22,7 @@ export default function ServicesTicker() {
       scrollTrigger: {
         trigger: wrapper,
         pin: true,
-        start: "top top",
+        start: "center center",
         end: "+=3000px",
         scrub: true
       }
@@ -32,8 +32,8 @@ export default function ServicesTicker() {
     let split = SplitText.create(".Horizontal__text", { type: "chars, words" });
     split.chars.forEach((char) => {
       gsap.from(char, {
-        yPercent: "random(-200, -200)",
-        rotation: "random(-20, -20)",
+        yPercent: "random(-200, -300)",
+        rotation: "random(10, -40)",
         ease: "back.out(1.2)",
         scrollTrigger: {
           trigger: char,
@@ -52,9 +52,9 @@ export default function ServicesTicker() {
 
   return (
     <div ref={scope}>
-      <section className="Horizontal bg-[#f0eeeb] sm:py-8 overflow-hidden">
-        <div className="container px-4 sm:px-6 md:px-12">
-          <h3 className="Horizontal__text heading-xl text-black font-extrabold text-[clamp(40px,10vw,120px)] leading-[1] tracking-[-0.03em]">
+      <section className="Horizontal bg-[#f0eeeb] sm:py-0 overflow-hidden min-h-[100px] md:min-h-[150px]">
+        <div className="px-4 sm:px-6 md:px-4">
+          <h3 className="Horizontal__text heading-xl text-black font-extrabold text-[clamp(40px,5vw,120px)] leading-[1] tracking-[-0.03em]">
             Ready to Rise at Seven?
           </h3>
         </div>
